@@ -21,8 +21,13 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 
 public class SecurityConfiguration {
-
     @Bean
+    public  JdbcUserDetailsManager jdbcUserDetailsManager(DataSource dataSource){
+        // for the data source we will use the same as the global data
+        // source (defined in the application.properties file)
+        return new JdbcUserDetailsManager(dataSource);
+    }
+    //@Bean
     public InMemoryUserDetailsManager inMemoryUserDetailsManager(PasswordEncoder passwordEncoder){
         String encodedPassword = passwordEncoder.encode("osmel");
         System.out.println(encodedPassword);
