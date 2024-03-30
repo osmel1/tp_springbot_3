@@ -51,8 +51,5 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(ar->ar.anyRequest().authenticated())
                 .build();
     }
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+
 }
