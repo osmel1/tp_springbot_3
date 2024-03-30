@@ -37,10 +37,11 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
+
                 .formLogin(Customizer.withDefaults())
+                .authorizeHttpRequests(ar->ar.requestMatchers("/home/**").permitAll())
                 .authorizeHttpRequests(ar->ar.requestMatchers("/admin/**").hasRole("ADMIN"))
                 .authorizeHttpRequests(ar->ar.requestMatchers("/user/**").hasRole("USER"))
-                .authorizeHttpRequests(ar->ar.requestMatchers("/home/**").permitAll())
                 .exceptionHandling(ar->ar.accessDeniedPage("/notAuthorized"))
                 .authorizeHttpRequests(ar->ar.anyRequest().authenticated())
                 .build();

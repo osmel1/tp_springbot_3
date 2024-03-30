@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.net.BindException;
-import java.util.List;
-
 @Controller
 @AllArgsConstructor
 public class PatientController {
@@ -40,7 +37,7 @@ public class PatientController {
     public String delete(Long id , String keyword , int page) {
         System.out.println("you deleted the patient with id = "+id);
         patientRepository.deleteById(id);
-        return "redirect:/index?page="+page+"&keyword="+keyword;
+        return "redirect:/user/index?page="+page+"&keyword="+keyword;
     }
     @GetMapping("/admin/edit")
     public String edit(Model model, Long id) {
@@ -62,10 +59,14 @@ public class PatientController {
     public String home(){
         return "home";
     }
+    @GetMapping("/tata/test")
+    public String test(){
+        return "test";
+    }
     @PostMapping("/admin/save")
     public String save(Model model, @Valid Patient patient, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) return "formPatient";
         patientRepository.save(patient);
-        return "redirect:/index";
+        return "redirect:/user/index";
     }
 }
