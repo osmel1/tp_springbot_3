@@ -1,4 +1,9 @@
 # Activité Pratique N°3 : Spring MVC Spring Data JPA Thymeleaf
+## Supervisé par :
+* **Pr Abdelmajid Bousselham**
+## Réalise Par : 
+* **Oussama ElHachimi** - [osmel1](https://github.com/osmel1)
+  
 Ce TP constitue une extension du TP précédent, à savoir : [Activité Pratique N°2 : ORM, Jpa, Hibernate Spring Data](https://github.com/osmel1/tpSpring1)
 
 ## Les utilisations de l'application : 
@@ -11,7 +16,7 @@ Ce TP constitue une extension du TP précédent, à savoir : [Activité Pratique
 
   - Dans le cas spécifique de cette application, qui se concentre uniquement sur l'authentification des utilisateurs, seule la méthode loadUserByUsername est utilisée. Cependant, si l'application nécessite également un processus d'inscription, les autres méthodes définies dans l'interface SecurityService peuvent être utilisées.
 - ## Application Web JEE basée sur Spring MVC, Thylemeaf et Spring Data JPA
-Dans ce tp on a creer une application web qui donne l'utilisateur la possibilites de : 
+Dans ce tp on a creer une application web qui donne l'utilisateur la possibilites de gestion des patients : 
   
   - Pour gérer les mises en page réutilisables dans les applications web pour garder le meme navbar et changer le contenu on a utliser une template 'layout' en utilisant `**ThymleafLayout**`
   ```<body>
