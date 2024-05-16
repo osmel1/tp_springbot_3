@@ -1,6 +1,6 @@
 # Activité Pratique N°3 : Spring MVC Spring Data JPA Thymeleaf
 ## Supervisé par :
-* **Pr Abdelmajid Bousselham**
+* **Pr Mohamed YOUSSFI**
 ## Réalise Par : 
 * **Oussama ElHachimi** - [osmel1](https://github.com/osmel1)
   
